@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+   <!---created by Paige Van Overberghe on March 29---> 
+  
+    <title>About Us</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Oswald:400,700,900|Didact Gothic" rel="stylesheet"> 
+    
+    <style>
+         body {
+            margin: 0;
+            height: 200vh;
+            display: flex; /* Enable flexbox */ 
+            flex-direction: column;
+            align-items: center;
+        }
+      
+      
+        .container { /* Rectangle */
+            width: 99%;
+            height: 17.5%;
+            border: 2px solid black; 
+            position: relative;
+            display: flex;
+            margin-top: 2%; 
+        }
+        
+        .navbar {
+            width: 100%; /* Make navbar full width */
+            height: 28%;
+            background-color: black; 
+            position: absolute; 
+            bottom: 0;
+            justify-content: center;
+        }
+        .navbar ul {
+            list-style-type: none; 
+            margin: 0; 
+            padding: 26px; 
+            display: flex;
+            justify-content: center;
+        }
+        .navbar a {
+            font-size: 20px;
+            font-family: 'Roboto', sans-serif;
+            color: white; 
+            padding: 28px 50px;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+        
+        .dropdown {
+            position: relative; 
+        }
+        
+        .dropdown-content {
+            display: none; 
+            background-color: #f9f9f9; 
+            box-shadow: 0px 8px 16px 0px; 
+            flex-direction: column; 
+            align-items: center; /* Center items horizontally */
+            text-align: center; /* Center text within the items */
+            position: absolute;
+            left: 50%; /* Center the dropdown */
+            transform: translateX(-50%); /* Adjust for centering */
+            z-index: 1; /* Keeps it above other content */
+            width: 100%; /* Make dropdown width same as the button */
+            max-width: 300px; /* Set a maximum width if needed */
+        }
+      
+        .dropdown:hover  .dropdown-content {
+            display: block; /* Show dropdown on hover */
+        }
+        
+        .dropdown-content a {
+            font-size: 16px;
+            color: black; /* Text color for dropdown links */
+            padding: 16px 0px; /* Padding for dropdown links */
+            text-decoration: none; /* Remove underline */
+            display: block; /* Display links as block elements */
+            margin-top: 12px;
+        }
+        
+        .navbar a:hover {
+            background-color: #A7ABAA;
+            color: black;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: gold; 
+        }
+        
+        img {
+            position: absolute;
+            bottom: 120px;
+            left: 30px;
+            height: 90px;
+            width: auto;
+        }
+      
+        .laptop-image {
+            position: absolute;
+            height: 250px; /* Adjust height as needed */
+            width: auto; /* Maintain aspect ratio */
+            bottom: 45px;
+           left: 775px;
+            
+        }
+        .since {
+            position: absolute;
+            top: 215px;
+            left: 100px; 
+            height: 250px;
+            width: auto; 
+        }
+        
+        .title-text {
+            position: relative; 
+            text-align: left; /* Align text to the left */
+            margin-top: 25px; 
+            margin-left: 475px; /* Set left margin to 0 for alignment */
+        }
+        
+        h1 {
+            font-family: 'Oswald', serif;
+            font-weight: 900;
+            color: black;
+            font-size: 80px;
+            margin: 60px 0 20px 0;
+            text-align: left;
+        }
+        
+        h2 {
+            font-family: 'Roboto', serif;
+            color: gold;
+            font-size: 52px;
+            font-weight: 900;
+            margin: 0px;
+        }
+      
+        .body-text {
+            display: flex; /* Enable flexbox for body-text */
+            flex-direction: column; /* Align elements vertically */
+            align-items: flex-start; /* Align items at the start */
+            margin-top: 75px; /* Moves headings up or down */
+            margin-left: 20px; /* Adjust this value to align with SINCE 2024 logo */
+            margin-right: 500px; /* Keep right margin as needed */
+        }
+        
+        .heading-row {
+            display: flex; /* Use flexbox for the row */
+            align-items: center; /* Center items vertically */
+            margin-left: 200px; /* Align with the h5 container */
+        }
+        
+        h3 {
+            font-family: 'Roboto', serif;
+            color: black;
+            font-size: 56px;
+            margin: 10px; 
+          
+        }
+      
+        h4 {
+            font-family: 'Oswald', serif;
+            font-weight: 900;
+            color: black;
+            font-size: 56px;
+            margin: 10px; 
+            margin-left: 10px
+           
+        }
+      
+        h5 {
+            font-weight: normal;
+          font-family: 'Didact Gothic', serif;
+            color: black;
+            font-size: 32px;
+            margin: 12px 0 80px 10px; /* Adjust margin to align with previous headings */
+            align-self: flex-start; /* Align h5 with left */
+        }
+       
+        .h5-container {
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start;
+    position: relative;
+    width: 110%;
+    margin-left: 180px; /* Adjust this value to shift it further right */
+}
+
+.h5-container h5 {
+    font-weight: normal;
+    font-family: 'Didact Gothic', serif;
+    color: black;
+    font-size: 32px;
+    margin: 12px 0; /* Keep margins consistent */
+    padding: 10px; /* Add padding for space around text */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    box-sizing: border-box; /* Ensure padding is included in width/height calculations */
+}
+
+/* Apply hover effect only when hovering over the h5 element */
+        .h5-container:hover h5 {
+            background-color: gold; 
+            color: black; /* Change text color if needed */
+        }
+
+        /* Lines above and below the h5 */
+        .h5-container::before,
+        .h5-container::after {
+            content: ''; /* Create empty content for lines */
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 2px; /* Height of the lines */
+            background-color: black; /* Color of the lines */
+            transition: opacity 0.3s; /* Smooth transition for opacity */
+        }
+
+        .h5-container::before {
+            top: 0px; /* Position the top line */
+        }
+
+        .h5-container::after {
+            bottom: 0px; /* Position the bottom line */
+        }
+
+        .h5-container:hover::before,
+        .h5-container:hover::after {
+            opacity: 0; /* Fade out lines on hover */
+        }
+      
+      h6 {
+          font-family: 'Didact Gothic', serif;
+          color: black;
+          font-size: 26px;
+          margin-left: auto; /* Pushes text to the right */
+          align-self: flex-end; /* Align to the right */
+          margin-top: 10px; /* Adjust spacing */
+      }
+  
+       .x {
+            position: absolute;
+            top: 80px; 
+            left: 1375px;
+            height: 40px;
+            width: auto;
+        }
+        
+        .ig {
+            position: absolute;
+            top: 80px;
+            left: 1300px;
+            height: 40px;
+            width: auto;
+        }
+        
+        
+        .bottom-logo {
+            position: absolute;
+            bottom: -760px;
+            left: 240px; /* Adjust this value to position it horizontally as needed */
+            height: 70px; /* Height of the logo */
+            width: auto; 
+        }
+      
+      .contact-us {
+          position: absolute;
+          bottom: -170px; /* Matches bottom logo position */
+          left: 475px; /* Matches bottom logo alignment */
+          font-family: 'Didact Gothic', serif;
+          color: black;
+          font-size: 26px;
+          font-weight: bold;
+      }
+      
+      .connect {
+          position: absolute;
+          bottom: -200px; /* Matches bottom logo position */
+          left: 900px; /* Matches bottom logo alignment */
+          font-family: 'Didact Gothic', serif;
+          color: black;
+          font-size: 26px;
+          font-weight: bold;
+      }
+
+      .contact-us span,
+      .connect span {
+          font-size: 18px; /* Make Mail, Instagram, and X smaller */
+         
+      }
+      
+      .contact-us a,
+      .connect a {
+          text-decoration: none; /* Remove underline */
+          color: black; /* Keep links always black */
+          font-weight: bold;
+          transition: border-bottom 0.3s ease-in-out;
+      }
+
+      .contact-us a:hover,
+      .connect a:hover {
+         color: gold; /* Subtle underline on hover */
+      }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="https://x.com/renkokscouting?lang=en" target="_blank">
+            <img src="X LOGO.png" alt="X Social Media Logo" class="x">
+        </a>
+        <a href="https://www.instagram.com/renkokscouting/" target="_blank">
+            <img src="Instagram LOGO.png" alt="Instagram Social Media Logo" class="ig">
+        </a> 
+
+        <div class="hl"></div>
+        <div class="navbar">
+            <ul>
+                <img src="RKS LOGO.png" alt="Ren Kok Scouting Logo" class="logo-image">
+                 
+              <img src="RKS Laptop.png" alt="RKS Laptop" class="laptop-image"> 
+              
+                <img src="SINCE 2024.png" alt="Identifying when the organization was established" class="since">
+                <li><a href="#home">HOME</a></li>
+                <li class="dropdown">
+                    <a href="#prospectsboard" class="dropbtn">PROFILES</a>
+                    <div class="dropdown-content">
+                        <a href="#players">Players Get Scouted</a>
+                        <a href="#collegecoaches">College Coaches</a>
+                    </div>
+                </li>
+               
+                <li class="dropdown">
+                    <a href="#rankings" class="dropbtn">RANKINGS</a>
+                    <div class="dropdown-content">
+                        <a href="#howwerank">How We Rank</a>
+                        <a href="#toprankings">Top Rankings</a>
+                    </div>
+                </li>
+                <li><a href="#aboutus">ABOUT US</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="title-text">
+        <h1>GET YOUR FILM SEEN <br>FASTER:</h1>
+        <h2><i>Scouting high school football players <br> with NFL level evaluations</i></h2>
+    </div>
+
+    <div class="body-text"> 
+        <div class="heading-row">
+            <h3>ABOUT REN KOK</h3>
+            <h4>SCOUTING</h4>
+        </div>
+      
+        <div class="h5-container">
+            <h5>I am committed to helping you achieve your athletic goals. I offer scouting services with detailed film evaluations using my advanced NFL-level grading scale to assess your skills. This scouting service is designed to highlight your value to coaches and help them filter through potential recruits. Once evaluated, your profile is added to my prospect board, which is sent out to over 175+ college coaches each week.  As a scout, not a recruiter, my goal is to amplify your exposure to coaches!  </h5> 
+             
+            <h6>LEARN MORE</h6>
+          
+          
+            <p class="contact-us">
+              CONTACT US <br>
+              <span><a href="mailto:renkokscouting@gmail.com" target="_self" style="text-decoration:none">renkokscouting@gmail.com</a></span>
+          </p>
+ 
+          <p class="connect"> 
+              CONNECT <br>
+              <span>
+                  <a href="https://www.instagram.com/renkokscouting/" target="_blank" style="text-decoration:none">Instagram</a><br>
+                  <a href="https://x.com/renkokscouting?lang=en" style="text-decoration:none" target="_blank">X</a>
+              </span>
+          </p>
+
+  
+        </div>
+          
+        <img src="RKS LOGO.png" alt="Ren Kok Scouting Logo" class="bottom-logo">
+    </div>
+  
+</body>
+</html>
